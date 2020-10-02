@@ -29,7 +29,6 @@ axios
         articleMaker(art);
       });
     });
-    console.log(data);
   })
   .catch((err) => {
     console.log(err);
@@ -58,4 +57,9 @@ function articleMaker(object) {
   cardAuthor.appendChild(cardImgContainer);
   cardImgContainer.appendChild(cardImage);
   cardAuthor.appendChild(authorName1);
+
+  card.addEventListener('click', () =>{
+    console.log(object.headline)
+  })
+  return card;
 }
